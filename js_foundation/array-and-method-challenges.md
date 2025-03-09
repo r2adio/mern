@@ -36,3 +36,4 @@ console.log(citiesVisited);
 ```javascript
 
 ```
+![hello](~/Downloads/blue.png) 
