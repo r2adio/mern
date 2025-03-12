@@ -33,7 +33,54 @@ console.log(citiesVisited);
 ```
 
 ## You've an array named `teaOrders` w/ `"chai"`, `"iced tea"`, `"matcha"`, and `"early grey"`. Remove the last element of the array using the `pop` method and store it in a variable named `lastOrder`.
-```javascript
 
+```javascript
+let teaOrders = ["chai", "iced tea", "match", "earl grey"];
+const lastOrder = teaOrders.pop();
+console.log(teaOrders);
+console.log(lastOrder);
 ```
-![hello](~/Downloads/blue.png) 
+
+## You've an array named `popularTeas` containing `"green tea"`, `"oolong tea"`, and `"chai"`. Create a soft copy of this array named `softCopyTeas`.
+
+```javascript
+let popularTeas = ["green tea", "oolong tea", "chai"];
+let softCopyTeas = popularTeas;
+popularTeas.pop();
+console.log(softCopyTeas);
+console.log(popularTeas);
+```
+
+## You've an array named `topCities` containing `"Berlin"`, `"Singapore"`, and `"New York"`. Create a hard copy of this array named `hardCopyCities`.
+
+```javascript
+let topCities = ["Berlin", "Singapore", "New York"];
+let hardCopyCities = [...topCities];
+topCities.pop();
+console.log(hardCopyCities);
+```
+
+## You've 2 arrays: `europeanCities` containing `"Paris"` and `"Rome"`, and `asainCities` containing `"Tokyo"` and `"Bangkok"`.Merge these 2 arrays into a new array named `worldCities`.
+
+```javascript
+let europeanCities = ["Paris", "Rome"];
+let asainCities = ["Tokyo", "Bangkok"];
+let worldCities = europeanCities.concat(asainCities);
+console.log(worldCities);
+```
+
+## You've an array an array `teaMenu` containing `"masala chai"`, `"oolong tea"`, `"green tea"`, and `"earl grey"`. Find the length of the array and store it in a variable named `menuLength`.
+
+```javascript
+let teaMenu = ["masala chai", "oolong tea", "green tea", "earl grey"];
+let menuLength = teaMenu.length;
+console.log(menuLength);
+```
+
+## You've an array named `cityBucketList` containing `"Kyoto"`, `"London"`, `"Cape Town"`, and `"Vancouver"`. Check if `"London"` is in the array and store the result in a variable named `isLondonInList`.
+
+```javascript
+let cityBucketList = ["Kyoto", "London", "Cape Toen", "Vancouver"];
+let isLondonInList = cityBucketList.includes("London");
+console.log(isLondonInList);  //true
+```

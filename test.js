@@ -1,4 +1,3 @@
-let teaOrders = ["chai", "iced tea", "match", "earl grey"];
-let lastOrder = teaOrders.pop;
-console.log(teaOrders);
-console.log(lastOrder);
+let cityBucketList = ["Kyoto", "London", "Cape Toen", "Vancouver"];
+let isLondonInList = cityBucketList.includes("London");
+console.log(isLondonInList);  //true
