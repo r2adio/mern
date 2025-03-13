@@ -1,6 +1,6 @@
-let arr0 = ["Paris", "New York", "Tokyo", "London"];
-let arr1 = [];
-for (let i = 0; i < arr0.length; i++) {
-  arr1.push(arr0[i]);
+let numbers = [2, 5, 7, 9]
+let doubleNumbers = [];
+for (let i = 0; i < numbers.length; i++) {
+  const element = array[i];
+  
 }
-console.log(arr1);
