@@ -8,5 +8,11 @@ addTaskButton.addEventListener("click", () => {
   if (taskTest === "") return;
   const newTask = { id: Date.now(), text: taskTest, completed: false };
   tasks.push(newTask);
+  saveTasks();
   todoInput.value = ""; //clears the input box
+  console.log(tasks);
 });
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
