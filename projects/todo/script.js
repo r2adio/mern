@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const addTaskButton = document.getElementById("add-task-btn");
   const todoList = document.getElementById("todo-list");
 
+  //
   let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
   tasks.forEach((task) => renderTask(task));
@@ -14,11 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const newTask = { id: Date.now(), text: taskTest, completed: false };
     tasks.push(newTask);
     saveTasks();
-    renderTask();
+    renderTask(newTask);
     todoInput.value = ""; //clears the input box
     console.log(tasks);
   });
 
+  //pick up task from local storage, and
   function renderTask(task) {
     const li = document.createElement("li");
     li.setAttribute("data-id", task.id);
@@ -31,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.classList.toggle("completed");
       saveTasks();
     });
+    //delete button
     li.querySelector("button").addEventListener("click", (e) => {
       e.stopPropagation(); //prevent toggle from firing
       tasks = tasks.filter((t) => t.id !== task.id);
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     todoList.appendChild(li);
   }
 
+  // moving elements from array to local storage
   function saveTasks() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }
