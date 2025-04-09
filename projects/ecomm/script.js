@@ -1,3 +1,4 @@
+//assignments: add remove btn N adjust total amount, local storage,
 document.addEventListener("DOMContentLoaded", () => {
   const products = [
     { id: 0, name: "prod0", price: 9.99 },
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   products.forEach((product) => {
     const productDiv = document.createElement("div");
     productDiv.classList.add("product");
-    productDiv.innerHTML = `<span>${product.name} - $${product.price.toFixed(2)}</span>
+    productDiv.innerHTML = `<span>${product.name} - $ ${product.price.toFixed(2)}</span>
     <button data-id='${product.id}'>Add to cart</button>`;
     productList.appendChild(productDiv);
   });
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cart.forEach((item, index) => {
         totalPrice += item.price;
         const cartItem = document.createElement("div");
-        cartItem.innerHTML = `${item.name} - $${item.price.toFixed(2)}`;
+        cartItem.innerHTML = `${item.name} - $ ${item.price.toFixed(2)}`;
         cartItems.appendChild(cartItem);
         totalPriceDispplay.textContent = `${totalPrice.toFixed(2)}`;
       });
